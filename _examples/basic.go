@@ -1,21 +1,21 @@
 package main
 
 import "fmt"
+import "github.com/bhargav175/noop"
 
-var num = 14
-
-func generateA() func() {
+func returnNoopOrNot(val int) func() {
 	var a func()
-	if num%2 == 0 {
-		a = Noop
+	if val%2 == 0 {
+		a = noop.Noop
 	} else {
 		a = func() {
-			fmt.Printf("This is soemething")
+			fmt.Printf("%d results in not a noop", val)
 		}
 	}
 	return a
 }
 
 func main() {
-	generateA()()
+	returnNoopOrNot(14)()
+	returnNoopOrNot(15)()
 }
