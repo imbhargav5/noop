@@ -15,7 +15,8 @@ go get github.com/bhargav175/noop
 
 ```golang
 import "github.com/bhargav175/noop"
-...
+
+// ...
 
 var a func()
 
@@ -32,7 +33,7 @@ if want_to_do_something == true {
 }
 
 a()
-...
 
+// ...
 
 ```
